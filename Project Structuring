@@ -1,0 +1,174 @@
+# 🛒 Customer Segmentation using RFM Analysis & K-Means Clustering
+
+![Status](https://img.shields.io/badge/Status-Work%20In%20Progress-orange?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3-orange?style=flat-square&logo=scikit-learn)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?style=flat-square&logo=powerbi)
+![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square)
+
+> ⚠️ **This project is currently under development.** Contributions are actively welcome — see the [What Needs to Be Done](#what-needs-to-be-done) section to get started.
+
+---
+
+## What This Project Is About
+
+Retail businesses lose revenue by treating all customers the same. A loyal high-spender and a one-time buyer need completely different marketing strategies.
+
+This project builds an **end-to-end customer segmentation pipeline** that:
+1. Takes raw retail transaction data
+2. Engineers RFM (Recency, Frequency, Monetary) features per customer
+3. Groups customers into meaningful segments using K-Means clustering
+4. Visualizes insights in a Power BI / Looker Studio dashboard
+5. Deploys a live Streamlit app where you can look up any customer's segment
+
+**Business Question:** *"Who are our customers, and how should we engage them differently?"*
+
+---
+
+## Dataset
+
+- **Source:** [Online Retail II — UCI ML Repository](https://archive.ics.uci.edu/dataset/502/online+retail+ii) | [Kaggle Mirror](https://your-kaggle-link)
+- 1M+ transactions from a UK-based online retailer (2009–2011)
+- Key columns: `CustomerID`, `InvoiceNo`, `Quantity`, `UnitPrice`, `InvoiceDate`, `Country`
+
+> Download the dataset and place it in `data/raw/` before running any notebooks.
+
+---
+
+## Project Structure
+
+```
+customer-segmentation/
+│
+├── data/
+│   ├── raw/                    # ← Place downloaded dataset here (not tracked by Git)
+│   └── processed/              # ← Cleaned & engineered outputs go here
+│
+├── notebooks/
+│   ├── 01_eda.ipynb            # Exploratory data analysis
+│   ├── 02_rfm_features.ipynb   # RFM feature engineering
+│   └── 03_clustering.ipynb     # K-Means clustering & evaluation
+│
+├── app/
+│   └── streamlit_app.py        # Streamlit web app (to be built)
+│
+├── dashboard/
+│   └── customer_segments.pbix  # Power BI file (to be built)
+│
+├── assets/                     # Screenshots, plots
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ✅ What's Done
+
+- [x] Repository structure set up
+- [x] Dataset identified and uploaded to Kaggle
+- [x] Project scope and methodology defined
+
+---
+
+## 🔧 What Needs to Be Done
+
+This is where contributors can jump in. Pick any open task below:
+
+### 📓 Notebooks
+
+| Task | Notebook | Difficulty | Status |
+|---|---|---|---|
+| Data cleaning (remove nulls, cancelled orders) | `01_eda.ipynb` | ⭐ Beginner | ❌ Not started |
+| Exploratory data analysis & visualizations | `01_eda.ipynb` | ⭐ Beginner | ❌ Not started |
+| RFM feature engineering per customer | `02_rfm_features.ipynb` | ⭐⭐ Intermediate | ❌ Not started |
+| Normalize features with StandardScaler | `02_rfm_features.ipynb` | ⭐ Beginner | ❌ Not started |
+| Elbow Method to find optimal K | `03_clustering.ipynb` | ⭐⭐ Intermediate | ❌ Not started |
+| K-Means clustering & label segments | `03_clustering.ipynb` | ⭐⭐ Intermediate | ❌ Not started |
+| Silhouette Score evaluation | `03_clustering.ipynb` | ⭐⭐ Intermediate | ❌ Not started |
+| Try DBSCAN as an alternative | `03_clustering.ipynb` | ⭐⭐⭐ Advanced | ❌ Not started |
+
+### 📊 Dashboard
+
+| Task | Tool | Status |
+|---|---|---|
+| Connect segmented CSV to Power BI | Power BI | ❌ Not started |
+| Build KPI cards (total customers, avg spend per segment) | Power BI | ❌ Not started |
+| Segment distribution chart | Power BI | ❌ Not started |
+| Country-wise segment map | Power BI | ❌ Not started |
+
+### 🌐 Streamlit App
+
+| Task | Status |
+|---|---|
+| Basic app layout | ❌ Not started |
+| Customer ID input → segment prediction | ❌ Not started |
+| Display customer RFM stats | ❌ Not started |
+| Deploy on Streamlit Cloud | ❌ Not started |
+
+---
+
+## How to Contribute
+
+1. **Fork this repository** and clone it locally:
+   ```bash
+   git clone https://github.com/your-username/customer-segmentation.git
+   cd customer-segmentation
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Download the dataset** from the link above and place it in `data/raw/`
+
+4. **Pick a task** from the "What Needs to Be Done" section above
+
+5. **Create a new branch** for your work:
+   ```bash
+   git checkout -b feature/your-task-name
+   ```
+
+6. **Commit and push:**
+   ```bash
+   git add .
+   git commit -m "feat: describe what you did"
+   git push origin feature/your-task-name
+   ```
+
+7. **Open a Pull Request** — describe what you worked on and mark the task as complete in the PR description
+
+---
+
+## Reporting Issues or Suggestions
+
+- Open an [Issue](https://github.com/your-username/customer-segmentation/issues) for bugs, questions, or ideas
+- Please check existing issues before opening a new one
+
+---
+
+## Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| Python 3.10 | Core language |
+| Pandas & NumPy | Data cleaning & feature engineering |
+| Scikit-learn | K-Means, StandardScaler, Silhouette Score |
+| Matplotlib & Seaborn | EDA visualizations |
+| Power BI | Business dashboard |
+| Streamlit | Web app |
+| GitHub | Version control & collaboration |
+
+---
+
+## Author
+
+**Your Name** — Final Year Student, Business Analytics
+
+- LinkedIn: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
+- GitHub: [github.com/your-username](https://github.com/your-username)
+- Kaggle: [kaggle.com/your-profile](https://kaggle.com/your-profile)
+
+---
+
+*If this project helped you learn something, please ⭐ the repo!*
