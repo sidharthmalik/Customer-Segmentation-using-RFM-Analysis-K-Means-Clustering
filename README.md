@@ -51,9 +51,3 @@ This project helps retail teams identify:
 - at-risk customers for reactivation messaging
 - low-value segments for efficient marketing spend
 
-## LinkedIn Post Angle
-
-Share the project with a focus on business outcomes:
-
-- "Built a customer segmentation model using RFM and K-Means to group retail customers and drive targeted marketing." 
-- "Mapped customer value and engagement patterns from raw retail data to actionable segments."
