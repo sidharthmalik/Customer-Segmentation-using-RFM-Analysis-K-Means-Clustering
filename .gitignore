@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.env
+venv/
+.ipynb_checkpoints/
+
+# Dataset files
+data/*.xlsx
+
+# VS Code
+.vscode/
